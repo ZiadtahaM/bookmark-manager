@@ -1,9 +1,34 @@
-# BookMark-Task
+# Bookmark Manager: Web Resource Bookmarking Utility
 
-Frontend web application managing user interface state and layout rendering.
+Responsive client-side web application for organizing, validating, and managing frequently accessed web resources with browser local persistence.
 
-Tech stack: html
+```mermaid
+graph TD
+    Client[Web Browser] --> UI[Bookmark Manager UI]
+    UI --> Validator[URL Pattern & Protocol Validator]
+    Validator -->|Valid| Storage[(Browser LocalStorage Engine)]
+    Validator -->|Invalid| Alert[Validation Error Feedback]
+    Storage --> Table[Saved Resources Table]
+    Table --> Launch[External Resource Launch]
+    Table --> Delete[Record Deletion]
+```
 
-How to run: clone repository, install dependencies, and start the local server.
+## Features
 
-Live demo: https://ziadtaham.github.io/smart-bookmark-manager/
+- **Protocol Validation**: Enforces valid URL patterns (`http://`, `https://`) before storing links.
+- **Client Persistence**: Uses browser LocalStorage to maintain bookmark collections across sessions.
+- **Responsive Table**: Mobile-friendly presentation of site names, URLs, and action controls.
+
+## Technology Stack
+
+- **Markup**: HTML5
+- **Styling**: Custom CSS3 & Bootstrap
+- **Scripting**: Vanilla JavaScript (ES6)
+
+## Local Execution
+
+Open `index.html` directly in any web browser, or serve locally:
+
+```bash
+npx serve .
+```
