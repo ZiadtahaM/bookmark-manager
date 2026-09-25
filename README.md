@@ -6,4 +6,4 @@ Tech stack: html
 
 How to run: clone repository, install dependencies, and start the local server.
 
-Live demo: https://ziadtaham.github.io/BookMark-Task/showcase.html
+Live demo: https://ziadtaham.github.io/smart-bookmark-manager/
